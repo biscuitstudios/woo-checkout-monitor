@@ -52,8 +52,12 @@ solved, and nothing in this plugin will help.
 **Blocks checkout.** The plugin hooks
 `woocommerce_after_checkout_validation`, which the blocks-based checkout does not
 fire. On a blocks checkout it logs nothing at all, and an empty log reads exactly
-like a quiet store. Check which checkout your store uses before you trust
-silence.
+like a quiet store.
+
+Since 1.0.1 you do not have to remember this. If the checkout page uses the
+WooCommerce Checkout block, the plugin says so in a notice on the Plugins screen
+and on WooCommerce > Status, because a line in a README is no use to someone
+looking at a quiet log and concluding the store is fine.
 
 ## Configuration
 

@@ -4,7 +4,7 @@ Tags: woocommerce, card testing, checkout, logging, fraud
 Requires at least: 6.3
 Tested up to: 7.0
 Requires PHP: 8.2
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,20 @@ as-is, with no support. Forks welcome.
 4. Place one real test order and confirm the log line reads token=yes.
 
 == Changelog ==
+
+= 1.0.1 =
+* New: the plugin now says when it is not recording anything. On a store whose
+  checkout page uses the WooCommerce Checkout block it writes no log lines at
+  all, because it watches the classic shortcode checkout only, and an empty log
+  looks exactly like a quiet store. A notice on the Plugins screen and on
+  WooCommerce > Status now says so.
+* Note: this was already in the README from the first release. That was the
+  wrong place for it. Nobody reads a README while looking at a quiet log and
+  concluding the store is fine.
+* Note: the check reads the checkout page content with core's has_block()
+  rather than through WooCommerce's own Blocks utility class, which has moved
+  namespace more than once. A fatal here would take down the admin of a store
+  this plugin is only meant to be watching.
 
 = 1.0.0 =
 First release. Generalized from a single-site monitor written during a card
