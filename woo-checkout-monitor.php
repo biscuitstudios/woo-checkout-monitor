@@ -3,7 +3,7 @@
  * Plugin Name:       Woo Checkout Monitor
  * Plugin URI:        https://github.com/biscuitstudios/woo-checkout-monitor
  * Description:       Logs captcha token and referer state for every classic WooCommerce checkout submission, so card testing can be told apart from real traffic. Optional failsafe rejection of submissions carrying neither.
- * Version:           1.0.2
+ * Version:           1.0.3
  * Requires at least: 6.3
  * Requires PHP:      8.2
  * Requires Plugins:  woocommerce
@@ -52,7 +52,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'WOOCM_VERSION', '1.0.2' );
+define( 'WOOCM_VERSION', '1.0.3' );
 define( 'WOOCM_FILE', __FILE__ );
 define( 'WOOCM_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WOOCM_BASENAME', plugin_basename( __FILE__ ) );

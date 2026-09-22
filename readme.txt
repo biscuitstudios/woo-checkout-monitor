@@ -4,7 +4,7 @@ Tags: woocommerce, card testing, checkout, logging, fraud
 Requires at least: 6.3
 Tested up to: 7.0
 Requires PHP: 8.2
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,14 @@ as-is, with no support. Forks welcome.
 4. Place one real test order and confirm the log line reads token=yes.
 
 == Changelog ==
+
+= 1.0.3 =
+* No functional change. Released to verify the release pipeline end to end
+  after actions/checkout moved from v4 to v7 and softprops/action-gh-release
+  from v2 to v3. The release job only runs on a tag, so CI passing said
+  nothing about whether a release would still build and publish. This plugin
+  was chosen because it is installed on none of the hosted sites, so the
+  check costs nothing.
 
 = 1.0.2 =
 * Security hardening: the updater now pins its download URL to this plugin's
